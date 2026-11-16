@@ -8,8 +8,10 @@ body, header, nav, main, footer, img, h1, ul{
 
 /* Style rule for images */
 img {
-	max-width: 60%;
+	width: auto;
+	height: auto;
 	display: block;
+	margin: auto;
 }
 
 /* Style rules for header content */
@@ -23,7 +25,7 @@ header {
 header img {
 	margin: 0 auto;
 	height: auto;
-	padding-top: 20px;
+	padding-top: 60px;
 }
 
 h1 {
@@ -33,6 +35,7 @@ h1 {
 }
 
 nav {
+	padding-top: 70px;
 	margin: 0 auto;
 	width: 100%;
 	overflow: auto;
@@ -64,6 +67,10 @@ nav li a {
 	text-shadow: 3px 3px 3px black;
 }
 
+main li {
+	list-style-type: none;
+}
+
 .button {
 	background-color: #FF00FF;
 	border-radius: 15px;
@@ -75,6 +82,7 @@ nav li a {
 	font-size: 30px;
 	text-shadow: 3px 3px 3px black;
 	transition-duration: 0.2s;
+	background: linear-gradient(1deg, #cd00cd, #ff4dff);
 }
 
 .button:hover {
@@ -82,10 +90,12 @@ nav li a {
 	color: #A300A3;
 	text-shadow: 0px 0px 0px black;
 	text-align: center;
+	transform: scale(0.9);
+	background: linear-gradient(1deg, #ff6aff, #ffb5ff);
 }
 
 .mainbutton {
-	background-color: #FED000;
+	background-color: #FF00FF;
 	border-radius: 15px;
 	color: white;
 	padding: 10px 20px;
@@ -94,23 +104,34 @@ nav li a {
 	display: inline-block;
 	font-size: 30px;
 	text-shadow: 3px 3px 3px black;
-	transition: transform .2s;
+	transition-duration: 0.2s;
+	background: linear-gradient(1deg, #cd00cd, #ff4dff);
+	margin : 0.8em;
+	margin-bottom: 0.4em;
 }
 
 .mainbutton:hover {
-	background-color: #fff;
-	color: black;
+	background-color: #FF8AFF;
+	color: #A300A3;
 	text-shadow: 0px 0px 0px black;
-	transform: scale(1.1);
+	text-align: center;
+	transform: scale(0.9);
+	background: linear-gradient(1deg, #ff6aff, #ffb5ff);
+	margin : 0.8em;
+	margin-bottom: 0.4em;
 }
 
 /* Style rules for main content */
 main {
-	margin: 0;
+	margin: auto;
 	padding: 2%;
 	overflow: auto;
 	text-align: center;
 	background: rgb(2 5 5 / 75%);
+	border-radius: 50px;
+	backdrop-filter: blur(8px);
+	width: 50%;
+	display: block;
 }
 
 main p {
@@ -120,7 +141,7 @@ main p {
 	color: white;
 	font-family: 'PM Dialog Regular', 'Verdana', 'Arial', 'sans-serif';
 	text-align: center;
-	text-shadow: 4px 4px 1px black;
+	text-shadow: 4px 4px 0px black;
 }
 
 main a {
@@ -211,7 +232,7 @@ body {
 }
 
 body {
-	background-image: url(https://hyperlink1991.neocities.org/pattern.jpg);
+	background-image: url(https://hyperlink1991.neocities.org/images/pattern.jpg);
 	background-size: var(--backgroundSize);
 	animation: movingBackground 10s linear infinite;
 }
@@ -222,20 +243,49 @@ body {
 }
 
 .xbutton {
-	filter: brightness(40%);
 	background-color: #FF00FF;
 	border-radius: 15px;
-	color: white;
+	color: grey;
 	padding: 10px 20px;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
 	font-size: 30px;
 	text-shadow: 3px 3px 3px black;
+	transform: scale(0.9);
+	transition-duration: 0.2s;
+	opacity: 100%;
+	background: linear-gradient(1deg, #670067, #b300b3);
+	font-family: 'Gill Sans MT', 'Verdana', 'Arial', 'sans-serif';
 }
 
 .xbutton:hover {
-	user-select: none;  
+	user-select: none;
+}
+
+.xbuttontext {
+  visibility: hidden;
+  width: 265px;
+  background-color: black;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 15px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 18%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 1s;
+  font-family: 'PM Dialog Regular', 'Verdana', 'Arial', 'sans-serif';
+  font-size: 0.7em;
+  text-shadow: 4px 4px 0px black;
+}
+
+.xbutton:hover .xbuttontext {
+  visibility: visible;
+  opacity: 0.7;
 }
 
 main pre {
@@ -245,6 +295,23 @@ main pre {
 	color: white;
 	font-family: 'PM Dialog Regular', 'Verdana', 'Arial', 'sans-serif';
 	text-align: center;
-	text-shadow: 4px 4px 1px black;
+	text-shadow: 4px 4px 0px black;
 	margin-bottom: 20px;
 }
+
+#factDisplay {
+	opacity: 100%;
+	font-size: 1.25em;
+	margin: 0 auto;
+	color: white;
+	font-family: 'PM Dialog Regular', 'Verdana', 'Arial', 'sans-serif';
+	text-align: center;
+	text-shadow: 4px 4px 0px black;
+}
+
+@font-face {
+  font-family: 'PM Dialog Regular';
+  src: url('https://hyperlink1991.neocities.org/fonts/papermario.ttf') format('truetype')
+}
+
+DIV { font-family: myFirstFont; }
